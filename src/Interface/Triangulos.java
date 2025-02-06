@@ -4,6 +4,9 @@
  */
 package Interface;
 
+import javax.swing.JDesktopPane;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 20221074010032
@@ -188,6 +191,16 @@ public class Triangulos extends javax.swing.JFrame {
 
     private void CalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcActionPerformed
         // TODO add your handling code here:
+        if(jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("")  ){
+        JOptionPane.showMessageDialog(
+                null,
+                "Preencha todos os lado!",
+                "ERRO",
+                JOptionPane.ERROR_MESSAGE
+        
+        );
+        }
+        else{
         double a = Double.parseDouble(jTextField1.getText());
         double b = Double.parseDouble(jTextField2.getText());
         double c = Double.parseDouble(jTextField3.getText());
@@ -213,7 +226,7 @@ public class Triangulos extends javax.swing.JFrame {
             tipoLabel.setText("Não é triângulo");
              areaLabel.setText("Área encontrada:0");
         }
-     
+        }
     
        
         
